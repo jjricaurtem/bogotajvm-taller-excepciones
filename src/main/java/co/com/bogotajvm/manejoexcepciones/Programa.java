@@ -16,28 +16,21 @@
  */
 package co.com.bogotajvm.manejoexcepciones;
 
-import java.awt.image.BufferedImage;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
-public class Image {
+public class Programa {
 
-    private BufferedImage image;
+    public static void main(String[] args) {
+        Path source = Paths.get("");
+        Path destination = Paths.get("");
+        int width = 0;
+        int height = 0;
+        ImageResizer resizer = new ImageResizer.Builder(source, destination)
+                .withHeight(height)
+                .withWidth(width)
+                .build();
+        resizer.run();
 
-    public Image(BufferedImage image) {
-        this.image = image;
-    }
-    /*a los metodos que queremos reutilizar los delegamos en nuestro objeto*/
-
-    public int getHeight() {
-        return this.image.getHeight();
-    }
-    /*a los metodos que queremos reutilizar los delegamos en nuestro objeto*/
-
-    public int getWidth() {
-        return this.image.getWidth();
-    }
-
-    public Image resize(int height, int width) {
-        BufferedImage resizedImage = new BufferedImage(width, height, this.image.getType());
-        return null; // TODO: por construir
     }
 }

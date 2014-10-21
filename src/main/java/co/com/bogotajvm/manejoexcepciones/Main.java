@@ -16,6 +16,9 @@
  */
 package co.com.bogotajvm.manejoexcepciones;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 /**
  *
  * @author John Ricaurte<john.ricaurte.ext@claro.com.co>
@@ -23,6 +26,13 @@ package co.com.bogotajvm.manejoexcepciones;
 public class Main {
 
     public static void main(String[] args) {
-
+        int width = 800;
+        int height = 600;
+        Path source = Paths.get("");
+        Path destination = Paths.get("");
+        ImageResizer imageResizer = new ImageResizer.Builder(source, destination)
+                .withHeight(height)
+                .withWidth(width)
+                .build();
     }
 }

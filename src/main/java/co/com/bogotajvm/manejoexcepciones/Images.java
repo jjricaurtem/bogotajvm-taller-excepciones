@@ -16,28 +16,23 @@
  */
 package co.com.bogotajvm.manejoexcepciones;
 
-import java.awt.image.BufferedImage;
+import java.nio.file.Path;
 
-public class Image {
+public final class Images {
 
-    private BufferedImage image;
+    private Images() {
+        throw new AssertionError(""); /*Para que no se pueda llamar el contructor  ni cpn reflection*/
 
-    public Image(BufferedImage image) {
-        this.image = image;
-    }
-    /*a los metodos que queremos reutilizar los delegamos en nuestro objeto*/
-
-    public int getHeight() {
-        return this.image.getHeight();
-    }
-    /*a los metodos que queremos reutilizar los delegamos en nuestro objeto*/
-
-    public int getWidth() {
-        return this.image.getWidth();
     }
 
-    public Image resize(int height, int width) {
-        BufferedImage resizedImage = new BufferedImage(width, height, this.image.getType());
-        return null; // TODO: por construir
+    public static boolean isImage(Path path) {
+        String filepath = path.toString();
+        String extension = filepath.substring(filepath.lastIndexOf('.', +1));
+        switch (extension) {
+            case "jpg":
+            case "JPG":
+                return true;
+        }
+        return false;
     }
 }
