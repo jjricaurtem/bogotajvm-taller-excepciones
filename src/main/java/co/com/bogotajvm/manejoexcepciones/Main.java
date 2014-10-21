@@ -11,4 +11,7 @@ package co.com.bogotajvm.manejoexcepciones;
  */
 public class Main {
 
+    public static void main(String[] args) {
+
+    }
 }
