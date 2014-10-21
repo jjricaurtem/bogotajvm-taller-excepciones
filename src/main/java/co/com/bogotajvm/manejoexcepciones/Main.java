@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 John Ricaurte<john.ricaurte.ext@claro.com.co>
+ * Copyright (C) 2014
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,7 +21,6 @@ import java.nio.file.Paths;
 
 /**
  *
- * @author John Ricaurte<john.ricaurte.ext@claro.com.co>
  */
 public class Main {
 
