@@ -20,9 +20,6 @@ package co.com.bogotajvm.manejoexcepciones;
  *
  * @author John Ricaurte<john.ricaurte.ext@claro.com.co>
  */
-public class Main {
+public class Image {
 
-    public static void main(String[] args) {
-
-    }
 }
